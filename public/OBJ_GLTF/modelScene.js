@@ -1,6 +1,6 @@
 import * as THREE from '../../../resources/threejs/r132/build/three.module.js'
 import { OrbitControls } from '../../../resources/threejs/r132/examples/jsm/controls/OrbitControls.js'
-import { context as pcModel } from '../OBJ_GLTF/pc.js'
+import { context as pcModel } from './pc.js'
 import { FocusLight } from "../lights_shadows/focusLight.js";
 import SpiralAdaptor from "../spiral/SpiralAdaptor.js";
 import { GUI } from '../../resources/threejs/r132/examples/jsm/libs/dat.gui.module.js';

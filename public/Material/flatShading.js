@@ -1,10 +1,11 @@
 import * as THREE from '../../resources/threejs/r132/build/three.module.js'
-import { GUI } from '../../resources/threejs/r132//examples/jsm/libs/dat.gui.module.js';
+import { GUI } from '../../resources/threejs/r132/examples/jsm/libs/dat.gui.module.js';
 
 //scenus
 const scenus = new THREE.Object3D();
 const spheres =[]
-const sphereMat = new THREE.MeshPhongMaterial({ wireframe: true });
+const sphereMat = new THREE.MeshPhongMaterial({  flatShading : true});
+
 for (let i = 0; i < 4; i++) {
 
     const sphereGeo = new THREE.IcosahedronGeometry(1, i+1);
@@ -21,25 +22,23 @@ const gui = new GUI();
 gui.domElement.style.display = 'none';
 
 const guiConf = {
-    wireframe: true,
-    wireframeLinecap: 'round',
-    wireframeLinejoin: 'round',
-    wireframeLinewidth: 1,
+    wireframe : false,
+    flatShading : true,
+    vertexColors : true,
     detail: 1,
     color : '#FFFFFF',
 }
 
+
 gui.add(guiConf, 'wireframe').onChange(() => {
     sphereMat.wireframe = guiConf.wireframe;
 });
-gui.add(guiConf, 'wireframeLinecap', ['butt', 'round', 'square']).onChange(() => {
-    sphereMat.wireframeLinecap = guiConf.wireframeLinecap;
+gui.add(guiConf, 'flatShading').onChange(() => {
+    sphereMat.needsUpdate = true;
+    sphereMat.flatShading = guiConf.flatShading;
 });
-gui.add(guiConf, 'wireframeLinejoin', ['round', 'bevel', 'mitter']).onChange(() => {
-    sphereMat.wireframeLinejoin = guiConf.wireframeLinejoin;
-});
-gui.add(guiConf, 'wireframeLinewidth', 1, 10, 0.2).onChange(() => {
-    sphereMat.wireframeLinewidth = guiConf.wireframeLinewidth;
+gui.add(guiConf, 'vertexColors').onChange(() => {
+    sphereMat.vertexColors = guiConf.vertexColors;
 });
 gui.add(guiConf, 'detail', 1, 4 , 1).onChange(() => {
    spheres.forEach(sphere=>{
@@ -68,8 +67,6 @@ const context = {
         gui.domElement.style.display = 'inherit';
     },
 };
-
-
 export { context };
 
 

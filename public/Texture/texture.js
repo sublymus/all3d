@@ -32,7 +32,7 @@ scenus.add(mesh);
 {
     const cubeSize = 1;
     const cubeGeo = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
-    const cubeMat = new THREE.MeshPhongMaterial({ color: '#8AC', map: boxtexture });
+    const cubeMat = new THREE.MeshPhongMaterial({ color: '#8AC', });
     const mesh = new THREE.Mesh(cubeGeo, cubeMat);
     mesh.position.set(0, .001, 0);
     scenus.add(mesh);

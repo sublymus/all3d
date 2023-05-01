@@ -1,6 +1,6 @@
-import EventEmiter from '../../lib/event/eventEmiter.js'
-import Server from '../../lib/server/server.js';
-import Anim from '../../lib/anim/Anim.js';
+import EventEmiter from '../event/eventEmiter.js'
+import Server from '../server/server.js';
+import Anim from '../anim/Anim.js';
 const BASE_LINK = '../views';
 
 

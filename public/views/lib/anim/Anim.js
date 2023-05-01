@@ -1,4 +1,4 @@
-import EventEmiter from '../../lib/event/eventEmiter.js'
+import EventEmiter from '../event/eventEmiter.js'
 class Anim extends EventEmiter {
     //TODO  analyse de 0
     #accu;

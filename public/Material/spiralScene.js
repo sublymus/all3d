@@ -1,10 +1,10 @@
 import * as THREE from '../../../resources/threejs/r132/build/three.module.js'
 import { OrbitControls } from '../../../resources/threejs/r132/examples/jsm/controls/OrbitControls.js'
-import {context as wireframe} from '../Material/wireFrame.js'
-import {contexts as material} from '../Material/material.js'
-import {context as flatShading } from "../Material/flatShading.js";
-import {context as opacity} from '../Material/opacity.js'
-import {context as fog} from '../Material/fog.js'
+import {context as wireframe} from './wireFrame.js'
+import {contexts as material} from './material.js'
+import {context as flatShading } from "./flatShading.js";
+import {context as opacity} from './opacity.js'
+import {context as fog} from './fog.js'
 import {FocusLight } from "../lights_shadows/focusLight.js";
 import {context as pointLight } from "../lights_shadows/pointLigth.js";
 import {context as spotLight } from "../lights_shadows/spotLight.js";

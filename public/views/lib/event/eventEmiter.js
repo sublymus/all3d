@@ -1,4 +1,4 @@
-import UidGenerator from '../../lib/uidGenerator/uidGenerator.js'
+import UidGenerator from '../uidGenerator/uidGenerator.js'
 
 class EventEmiter extends UidGenerator {
     #eventsManager = {};
