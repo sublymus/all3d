@@ -11,7 +11,7 @@ app.use(express.static('public'))
 
 app.get("/", (req, res) => {
   //res.redirect('/public/Home/home.html');
-  
+  res.sendFile(__dirname+'/index.html');
 });
 app.get("*", (req, res) => {
   const filePath = path.join(__dirname, req.path);
