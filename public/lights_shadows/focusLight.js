@@ -25,7 +25,6 @@ class FocusLight {
             const signe = () => {
                 const a = Math.random() * 2 - 1;
                 return Math.abs(a) / a
-
             };
             this.leds.push({
                 color,
@@ -44,9 +43,7 @@ class FocusLight {
                     z: 0
                 }
             })
-
         }
-
     }
     animus = (time, renderer, scene, camera) =>{
         const r = 2;

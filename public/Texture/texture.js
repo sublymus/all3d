@@ -9,7 +9,7 @@ const planeSize = 4;
 
 const loader = new THREE.TextureLoader();
 const texture = loader.load('../Texture/img/hardwood2_diffuse.jpg');
-const boxtexture = loader.load('../../resources/images/wall.jpg');
+const boxtexture = loader.load('../Texture/img/hardwood2_bump.jpg');
 const roughnessMap = loader.load('../Texture/img/hardwood2_roughness.jpg');
 const bumpMap = loader.load('../Texture/img/hardwood2_bump.jpg');
 
@@ -32,7 +32,7 @@ scenus.add(mesh);
 {
     const cubeSize = 1;
     const cubeGeo = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
-    const cubeMat = new THREE.MeshPhongMaterial({ color: '#8AC', });
+    const cubeMat = new THREE.MeshPhongMaterial({ map: boxtexture });
     const mesh = new THREE.Mesh(cubeGeo, cubeMat);
     mesh.position.set(0, .001, 0);
     scenus.add(mesh);

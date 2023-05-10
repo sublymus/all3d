@@ -27,7 +27,7 @@ const init = function (renderer) {
             scenus,
             animus : (time, renderer, scene, camera) => {
                 cubeCamera?.update(renderer, scene);
-                const r = 3;
+                const r = 10;
                 cube.position.set(r * Math.sin(time), r * Math.sin(time * 2), r * Math.cos(time))
                 cube.rotation.set(time, time, time);
             }

@@ -9,6 +9,10 @@ const server = app.listen(PORT, () => {
 app.use(express.static('public'))
 
 
+app.get("/", (req, res) => {
+  //res.redirect('/public/Home/home.html');
+  
+});
 app.get("*", (req, res) => {
   const filePath = path.join(__dirname, req.path);
   res.sendFile(filePath);

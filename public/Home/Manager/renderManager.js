@@ -66,19 +66,19 @@ const RenderManager = {
                     }
                 },
                 {
-                    label : 'Model',
+                    label : 'MiniGame',
                     listener : ()=> {
                         this.select(ModelScene);
                     }
                 },
                 {
-                    label : 'Model',
+                    label : 'Boid',
                     listener : ()=> {
                         this.select(ModelScene);
                     }
                 },
                 {
-                    label : 'Model',
+                    label : 'Shaders',
                     listener : ()=> {
                         this.select(ModelScene);
                     }
